@@ -46,7 +46,7 @@ export default function AnimatedText({ text, className = "", delay = 0 }: Animat
   return (
     <motion.div ref={ref} className={className} variants={container} initial="hidden" animate={controls}>
       {words.map((word, index) => (
-        <motion.span key={index} className="inline-block" variants={child}>
+        <motion.span key={index} className="inline-block mr-3" variants={child}>
           {word}{" "}
         </motion.span>
       ))}

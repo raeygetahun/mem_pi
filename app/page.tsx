@@ -19,15 +19,19 @@ export default function Home() {
         <div className="container relative z-20 px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center">
             <AnimatedText
-              text="LUMIÈRE"
+              text="Not Just Photos"
               className="text-5xl md:text-7xl lg:text-8xl font-serif text-white mb-4 tracking-wider"
             />
             <AnimatedText
-              text="LUXURY PHOTOGRAPHY STUDIO"
+              text="Time, sculpted."
+              className="text-5xl md:text-7xl lg:text-8xl font-serif text-white mb-4 tracking-wider"
+            />
+            {/* <AnimatedText
+              text="MEMORY PHOTOGRAPHY STUDIO"
               className="text-lg md:text-xl text-cream font-light tracking-[0.3em] mb-8"
               delay={0.5}
-            />
-            <Button
+            /> */}
+            {/* <Button
               asChild
               variant="outline"
               className="mt-8 bg-transparent border-cream text-cream hover:bg-cream/10 rounded-none px-8 py-6 text-sm tracking-widest"
@@ -36,7 +40,7 @@ export default function Home() {
                 VIEW OUR WORK
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
-            </Button>
+            </Button> */}
           </div>
         </div>
       </section>
@@ -99,13 +103,13 @@ export default function Home() {
               <div className="max-w-xl">
                 <h2 className="font-serif text-3xl md:text-4xl text-white mb-6">The Art of Capturing Moments</h2>
                 <p className="text-cream/80 mb-6 leading-relaxed">
-                  At Lumière, we believe in the transformative power of photography. Our studio is a sanctuary where
+                  At Memory Pictures, we believe in the transformative power of photography. Our studio is a sanctuary where
                   artistry meets technical excellence, creating timeless images that tell your unique story.
                 </p>
-                <p className="text-cream/80 mb-8 leading-relaxed">
+                {/* <p className="text-cream/80 mb-8 leading-relaxed">
                   Founded by award-winning photographers with over two decades of experience, our approach combines
                   classical techniques with contemporary vision.
-                </p>
+                </p> */}
                 <Button
                   asChild
                   variant="outline"
@@ -157,10 +161,10 @@ export default function Home() {
             <div className="max-w-3xl mx-auto text-center">
               <p className="text-gold text-5xl font-serif mb-8">"</p>
               <p className="text-white text-xl md:text-2xl font-serif italic mb-8">
-                Working with Lumière was an extraordinary experience. Their attention to detail and ability to capture
+                Working with Memory Pictures was an extraordinary experience. Their attention to detail and ability to capture
                 the essence of our brand elevated our entire campaign to new heights.
               </p>
-              <p className="text-cream/80 text-sm tracking-wider">VICTORIA REYNOLDS, VOGUE MAGAZINE</p>
+              <p className="text-cream/80 text-sm tracking-wider">DANIEL, RAM TRUCKING GROUP LLC</p>
             </div>
           </FadeInSection>
         </div>
@@ -229,7 +233,7 @@ const services = [
     title: "Portrait Photography",
     description:
       "Timeless portraits that capture the essence of your personality and style, perfect for personal branding or family heirlooms.",
-    icon: ({ className }) => (
+    icon: ({ className }: { className?: string }) => (
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
@@ -250,8 +254,8 @@ const services = [
     id: 2,
     title: "Commercial Photography",
     description:
-      "Elevate your brand with sophisticated commercial photography that communicates your brand's premium positioning.",
-    icon: ({ className }) => (
+      "Elevate your brand with commercial photography that communicates your brand's premium positioning.",
+    icon: ({ className }: { className?: string }) => (
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
@@ -273,8 +277,8 @@ const services = [
     id: 3,
     title: "Event Coverage",
     description:
-      "Comprehensive documentation of your luxury events, from intimate gatherings to grand galas, with unobtrusive professionalism.",
-    icon: ({ className }) => (
+      "Comprehensive documentation of your events, from intimate gatherings to grand galas, with unobtrusive professionalism.",
+    icon: ({ className }: { className?: string }) => (
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"

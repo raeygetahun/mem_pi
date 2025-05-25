@@ -14,13 +14,13 @@ export default function AboutPage() {
 
       {/* Header */}
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
-        <ParallaxImage src="/images/studio-wide.jpg" alt="Our luxury studio space" priority />
+        <ParallaxImage src="/images/studio-wide.jpg" alt="Our studio space" priority />
         <div className="absolute inset-0 bg-black/60 z-10" />
         <div className="container relative z-20 px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center">
             <AnimatedText text="OUR STORY" className="text-4xl md:text-6xl font-serif text-white mb-6 tracking-wider" />
             <AnimatedText
-              text="CRAFTING VISUAL NARRATIVES SINCE 2005"
+              text="CRAFTING VISUAL NARRATIVES"
               className="text-lg md:text-xl text-cream font-light tracking-[0.2em]"
               delay={0.5}
             />
@@ -36,12 +36,12 @@ export default function AboutPage() {
               <div className="max-w-xl">
                 <h2 className="font-serif text-3xl md:text-4xl text-white mb-8">Our Philosophy</h2>
                 <p className="text-cream/80 mb-6 leading-relaxed">
-                  At Lumière, we believe that photography is more than documentation—it's an art form that reveals truth
+                  At MemoryPictures, we believe that photography is more than documentation—it's an art form that reveals truth
                   through careful interpretation. Our approach balances technical precision with artistic vision,
                   creating images that resonate on both intellectual and emotional levels.
                 </p>
                 <p className="text-cream/80 mb-6 leading-relaxed">
-                  Founded in 2005 by renowned photographers Alexandra Dumont and James Chen, our studio has evolved into
+                  Founded by Sandra, our studio has evolved into
                   a collective of visual storytellers united by a commitment to excellence and innovation. We've built
                   our reputation on the belief that truly exceptional photography requires both mastery of craft and a
                   distinctive point of view.
@@ -111,7 +111,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="py-24">
+      {/* <section className="py-24">
         <div className="container px-4 md:px-6">
           <FadeInSection>
             <h2 className="font-serif text-3xl md:text-4xl text-white text-center mb-16">Meet Our Team</h2>
@@ -137,7 +137,7 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Awards & Recognition */}
       <section className="py-24 bg-charcoal/50">

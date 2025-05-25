@@ -47,8 +47,8 @@ export default function ContactPage() {
                     <MapPin className="h-6 w-6 text-gold mr-4 mt-1 shrink-0" />
                     <div>
                       <h3 className="text-white text-lg mb-2">Visit Our Studio</h3>
-                      <p className="text-cream/80 mb-1">123 Luxury Avenue, Suite 500</p>
-                      <p className="text-cream/80">New York, NY 10001</p>
+                      <p className="text-cream/80 mb-1">4409 EMDEN Street</p>
+                      <p className="text-cream/80">Silver Spring, MD, 20906</p>
                     </div>
                   </div>
 
@@ -65,7 +65,7 @@ export default function ContactPage() {
                     <Mail className="h-6 w-6 text-gold mr-4 mt-1 shrink-0" />
                     <div>
                       <h3 className="text-white text-lg mb-2">Email Us</h3>
-                      <p className="text-cream/80 mb-1">info@lumierestudio.com</p>
+                      <p className="text-cream/80 mb-1">info@memorypicture.com</p>
                       <p className="text-cream/80 text-sm">We respond within 24 hours</p>
                     </div>
                   </div>

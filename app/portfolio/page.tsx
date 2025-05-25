@@ -77,7 +77,7 @@ export default function PortfolioPage() {
       </section>
 
       {/* Client Logos */}
-      <section className="py-24 bg-black">
+      {/* <section className="py-24 bg-black">
         <div className="container px-4 md:px-6">
           <FadeInSection>
             <h2 className="font-serif text-2xl text-white text-center mb-16">Trusted By</h2>
@@ -99,7 +99,7 @@ export default function PortfolioPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact CTA */}
       <section className="py-24 bg-gradient-to-b from-black to-charcoal">

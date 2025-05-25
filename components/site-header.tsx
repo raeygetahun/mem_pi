@@ -6,8 +6,15 @@ import { usePathname } from "next/navigation"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
+
 
 export default function SiteHeader() {
+
+  const { scrollY } = useScroll()
+
+  const logoScale = useTransform(scrollY, [0, 100], [1, 0.8])
+  const logoRotate = useTransform(scrollY, [0, 100], [0, -5])
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const pathname = usePathname()
@@ -46,9 +53,13 @@ export default function SiteHeader() {
       )}
     >
       <div className="container flex h-20 items-center justify-between px-4 md:px-6">
+  
         <Link href="/" className="flex items-center gap-2 z-50">
-          <span className="font-serif text-2xl text-white tracking-wider">LUMIÈRE</span>
+        <motion.div style={{ scale: logoScale, rotate: logoRotate }} className="origin-left">
+          <span className="font-serif text-4xl text-white tracking-wider">MemoryPictures</span>
+          </motion.div>
         </Link>
+        
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-6">

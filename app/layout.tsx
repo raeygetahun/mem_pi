@@ -20,10 +20,9 @@ const cormorant = Cormorant_Garamond({
 })
 
 export const metadata: Metadata = {
-  title: "Lumière | Luxury Photography Studio",
+  title: "Memory Photography Studio",
   description:
-    "Premium photography services for discerning clients. Specializing in portrait, commercial, and editorial photography.",
-    generator: 'v0.dev'
+    "Premium photography services. Specializing in portrait, commercial, and editorial photography.",
 }
 
 export default function RootLayout({

@@ -7,10 +7,10 @@ export default function SiteFooter() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
             <Link href="/" className="inline-block mb-4">
-              <span className="font-serif text-2xl text-white tracking-wider">LUMIÈRE</span>
+              <span className="font-serif text-2xl text-white tracking-wider">MemoryPicture</span>
             </Link>
             <p className="text-cream/70 text-sm max-w-xs">
-              Premium photography services for discerning clients since 2005. Crafting visual narratives that inspire
+              Premium photography services for discerning clients. Crafting visual narratives that inspire
               and endure.
             </p>
           </div>
@@ -129,10 +129,26 @@ export default function SiteFooter() {
             </div>
           </div>
         </div>
+        <div className="border-t border-gray-700 mt-8 pt-8 text-center">
+          <p className="text-cream text-base">
+            &copy; {new Date().getFullYear()} MemoryPicture. All rights reserved.
+          </p>
+          <p className="text-cream/80 text-lg mt-2">
+            Built by{" "}
+            <a
+              href="https://algonixtechnologies.com/"
+              target="_blank"
+              className="text-gold font-bold hover:text-white transition-colors"
+            >
+              Algonix Technologies
+            </a>
+          </p>
+        </div>
 
-        <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+
+        {/* <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-cream/50 text-xs">
-            &copy; {new Date().getFullYear()} Lumière Studio. All rights reserved.
+            &copy; {new Date().getFullYear()} MemoryPictures. All rights reserved.
           </p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <Link href="/privacy" className="text-cream/50 text-xs hover:text-cream transition-colors">
@@ -142,7 +158,7 @@ export default function SiteFooter() {
               Terms of Service
             </Link>
           </div>
-        </div>
+        </div> */}
       </div>
     </footer>
   )

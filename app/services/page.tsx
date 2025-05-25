@@ -114,7 +114,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Pricing */}
-      <section className="py-24">
+      {/* <section className="py-24">
         <div className="container px-4 md:px-6">
           <FadeInSection>
             <div className="max-w-3xl mx-auto text-center mb-16">
@@ -167,7 +167,7 @@ export default function ServicesPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* FAQ */}
       <section className="py-24 bg-charcoal/50">
