@@ -1,11 +1,17 @@
-import Link from "next/link"
-import Image from "next/image"
-import { ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import AnimatedText from "@/components/animated-text"
-import ParallaxImage from "@/components/parallax-image"
-import CustomCursor from "@/components/custom-cursor"
-import FadeInSection from "@/components/fade-in-section"
+"use client";
+import Link from "next/link";
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import AnimatedText from "@/components/animated-text";
+import ParallaxImage from "@/components/parallax-image";
+import CustomCursor from "@/components/custom-cursor";
+import FadeInSection from "@/components/fade-in-section";
+import { Typewriter } from "react-simple-typewriter";
+import etherealPortraits from "../public/ethereal-portraits.jpg";
+import fashionForward from "../public/fashion-forward.jpg";
+import architecturalElegance from "../public/architectural-elegance.jpg";
+import studio from "../public/studio.jpg";
 
 export default function Home() {
   return (
@@ -14,18 +20,23 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <ParallaxImage src="/images/hero.jpg" alt="Luxury photography" priority />
-        <div className="absolute inset-0 bg-black/40 z-10" />
+        <ParallaxImage src="/lake-wide.jpg" alt="Luxury photography" priority />
+        <div className="absolute inset-0 bg-black/30 z-10  bg-black/40 backdrop-blur-sm p-6 rounded-md" />
         <div className="container relative z-20 px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center">
-            <AnimatedText
-              text="Not Just Photos"
-              className="text-5xl md:text-7xl lg:text-8xl font-serif text-white mb-4 tracking-wider"
-            />
-            <AnimatedText
-              text="Time, sculpted."
-              className="text-5xl md:text-7xl lg:text-8xl font-serif text-white mb-4 tracking-wider"
-            />
+            <div className="max-w-3xl mx-auto text-center">
+              <span className="text-5xl md:text-7xl lg:text-8xl font-serif text-white mb-4 tracking-wider block">
+                <Typewriter
+                  words={["Not Just Photos Time, sculpted."]}
+                  loop={1}
+                  cursor={false}
+                  cursorStyle="_"
+                  typeSpeed={60}
+                  deleteSpeed={50}
+                  delaySpeed={1000}
+                />
+              </span>
+            </div>
             {/* <AnimatedText
               text="MEMORY PHOTOGRAPHY STUDIO"
               className="text-lg md:text-xl text-cream font-light tracking-[0.3em] mb-8"
@@ -49,13 +60,18 @@ export default function Home() {
       <section className="py-24 bg-charcoal">
         <div className="container px-4 md:px-6">
           <FadeInSection>
-            <h2 className="font-serif text-3xl md:text-4xl text-white text-center mb-16">Featured Collections</h2>
+            <h2 className="font-serif text-3xl md:text-4xl text-white text-center mb-16">
+              Featured Collections
+            </h2>
           </FadeInSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredCollections.map((collection, index) => (
               <FadeInSection key={collection.id} delay={index * 0.2}>
-                <Link href={`/portfolio/${collection.slug}`} className="group block relative overflow-hidden">
+                <div
+                  // href='/#'
+                  className="group block relative overflow-hidden"
+                >
                   <div className="relative aspect-[3/4] overflow-hidden">
                     <Image
                       src={collection.image || "/placeholder.svg"}
@@ -66,10 +82,14 @@ export default function Home() {
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500" />
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                    <h3 className="font-serif text-xl mb-2">{collection.title}</h3>
-                    <p className="text-sm text-cream/80">{collection.description}</p>
+                    <h3 className="font-serif text-xl mb-2">
+                      {collection.title}
+                    </h3>
+                    <p className="text-sm text-cream/80">
+                      {collection.description}
+                    </p>
                   </div>
-                </Link>
+                </div>
               </FadeInSection>
             ))}
           </div>
@@ -95,16 +115,25 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <FadeInSection>
               <div className="relative aspect-square">
-                <Image src="/images/studio.jpg" alt="Our luxury studio space" fill className="object-cover" />
+                <Image
+                  src={studio}
+                  alt="Our luxury studio space"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </FadeInSection>
 
             <FadeInSection delay={0.3}>
               <div className="max-w-xl">
-                <h2 className="font-serif text-3xl md:text-4xl text-white mb-6">The Art of Capturing Moments</h2>
+                <h2 className="font-serif text-3xl md:text-4xl text-white mb-6">
+                  The Art of Capturing Moments
+                </h2>
                 <p className="text-cream/80 mb-6 leading-relaxed">
-                  At Memory Pictures, we believe in the transformative power of photography. Our studio is a sanctuary where
-                  artistry meets technical excellence, creating timeless images that tell your unique story.
+                  At Memory Pictures, we believe in the transformative power of
+                  photography. Our studio is a sanctuary where artistry meets
+                  technical excellence, creating timeless images that tell your
+                  unique story.
                 </p>
                 {/* <p className="text-cream/80 mb-8 leading-relaxed">
                   Founded by award-winning photographers with over two decades of experience, our approach combines
@@ -130,7 +159,9 @@ export default function Home() {
       <section className="py-24 bg-black">
         <div className="container px-4 md:px-6">
           <FadeInSection>
-            <h2 className="font-serif text-3xl md:text-4xl text-white text-center mb-16">Our Services</h2>
+            <h2 className="font-serif text-3xl md:text-4xl text-white text-center mb-16">
+              Our Services
+            </h2>
           </FadeInSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -138,8 +169,12 @@ export default function Home() {
               <FadeInSection key={service.id} delay={index * 0.2}>
                 <div className="bg-charcoal p-8 h-full flex flex-col group hover:bg-charcoal/80 transition-colors duration-300">
                   <service.icon className="h-10 w-10 text-gold mb-6" />
-                  <h3 className="font-serif text-xl text-white mb-4">{service.title}</h3>
-                  <p className="text-cream/70 mb-6 flex-grow">{service.description}</p>
+                  <h3 className="font-serif text-xl text-white mb-4">
+                    {service.title}
+                  </h3>
+                  <p className="text-cream/70 mb-6 flex-grow">
+                    {service.description}
+                  </p>
                   <Link
                     href={`/services#${service.slug}`}
                     className="text-gold text-sm tracking-wider group-hover:text-cream transition-colors duration-300 flex items-center"
@@ -161,10 +196,13 @@ export default function Home() {
             <div className="max-w-3xl mx-auto text-center">
               <p className="text-gold text-5xl font-serif mb-8">"</p>
               <p className="text-white text-xl md:text-2xl font-serif italic mb-8">
-                Working with Memory Pictures was an extraordinary experience. Their attention to detail and ability to capture
-                the essence of our brand elevated our entire campaign to new heights.
+                Working with Memory Pictures was an extraordinary experience.
+                Their attention to detail and ability to capture the essence of
+                our brand elevated our entire campaign to new heights.
               </p>
-              <p className="text-cream/80 text-sm tracking-wider">DANIEL, RAM TRUCKING GROUP LLC</p>
+              <p className="text-cream/80 text-sm tracking-wider">
+                DANIEL, RAM TRUCKING GROUP LLC
+              </p>
             </div>
           </FadeInSection>
         </div>
@@ -173,7 +211,12 @@ export default function Home() {
       {/* Contact CTA */}
       <section className="py-24 bg-black relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <Image src="/images/pattern.jpg" alt="Background pattern" fill className="object-cover" />
+          {/* <Image
+            src="/images/pattern.jpg"
+            alt="Background pattern"
+            fill
+            className="object-cover"
+          /> */}
         </div>
         <div className="container relative z-10 px-4 md:px-6">
           <FadeInSection>
@@ -182,8 +225,8 @@ export default function Home() {
                 Ready to Create Something Extraordinary?
               </h2>
               <p className="text-cream/80 mb-8">
-                Let's collaborate to bring your vision to life. Our team is ready to discuss your project and create a
-                tailored experience.
+                Let's collaborate to bring your vision to life. Our team is
+                ready to discuss your project and create a tailored experience.
               </p>
               <Button
                 asChild
@@ -199,7 +242,7 @@ export default function Home() {
         </div>
       </section>
     </main>
-  )
+  );
 }
 
 // Sample data
@@ -208,24 +251,24 @@ const featuredCollections = [
     id: 1,
     title: "Ethereal Portraits",
     description: "Fine art portrait photography with ethereal lighting",
-    image: "/images/portrait.jpg",
+    image: etherealPortraits,
     slug: "ethereal-portraits",
   },
   {
     id: 2,
     title: "Architectural Elegance",
     description: "Capturing the soul of architectural masterpieces",
-    image: "/images/architecture.jpg",
+    image: fashionForward,
     slug: "architectural-elegance",
   },
   {
     id: 3,
     title: "Fashion Forward",
-    description: "Editorial fashion photography for luxury brands",
-    image: "/images/fashion.jpg",
+    description: "Editorial fashion photography",
+    image: architecturalElegance,
     slug: "fashion-forward",
   },
-]
+];
 
 const services = [
   {
@@ -297,4 +340,4 @@ const services = [
     ),
     slug: "event-coverage",
   },
-]
+];

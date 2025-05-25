@@ -5,6 +5,9 @@ import { Button } from "@/components/ui/button"
 import FadeInSection from "@/components/fade-in-section"
 import CustomCursor from "@/components/custom-cursor"
 import GalleryGrid from "@/components/gallery-grid"
+import etherealPortraits from "../../public/ethereal-portraits.jpg";
+import fashionForward from "../../public/fashion-forward.jpg";
+import architecturalElegance from "../../public/architectural-elegance.jpg";
 
 export default function PortfolioPage() {
   return (
@@ -50,7 +53,7 @@ export default function PortfolioPage() {
                       </Link>
                     </Button>
                   </div>
-                  <div className="relative aspect-[4/3] overflow-hidden">
+                  <div className="relative aspect-[4/4] overflow-hidden">
                     <Image
                       src={collection.coverImage || "/placeholder.svg"}
                       alt={collection.title}
@@ -134,7 +137,7 @@ const collections = [
     title: "Ethereal Portraits",
     description:
       "Our portrait collection explores the depth of human emotion and character through carefully crafted lighting and composition. Each portrait tells a story, capturing not just appearances but the essence of the individual. We use a combination of natural and studio lighting to create images that feel both timeless and contemporary.",
-    coverImage: "/images/portrait.jpg",
+    coverImage: etherealPortraits,
     slug: "ethereal-portraits",
   },
   {
@@ -142,7 +145,7 @@ const collections = [
     title: "Architectural Elegance",
     description:
       "Architecture is frozen music, and our architectural photography aims to capture the rhythm and harmony of designed spaces. From historic landmarks to contemporary masterpieces, we document the interplay of light, form, and function that makes exceptional architecture so powerful. Our approach emphasizes both the grand vision and the intimate details.",
-    coverImage: "/images/architecture.jpg",
+    coverImage: architecturalElegance,
     slug: "architectural-elegance",
   },
   {
@@ -150,26 +153,26 @@ const collections = [
     title: "Fashion Forward",
     description:
       "Our fashion photography pushes boundaries while honoring the craftsmanship of designers. Working with leading brands and publications, we create editorial and campaign imagery that elevates fashion to art. Our distinctive visual approach combines dramatic lighting with dynamic composition to create images that command attention.",
-    coverImage: "/images/fashion.jpg",
+    coverImage: fashionForward,
     slug: "fashion-forward",
   },
-  {
-    id: 4,
-    title: "Luxury Products",
-    description:
-      "Exceptional products deserve exceptional photography. Our product photography uses precision lighting and meticulous attention to detail to showcase luxury items at their finest. Whether for advertising campaigns or e-commerce, we create images that highlight craftsmanship and inspire desire.",
-    coverImage: "/images/product.jpg",
-    slug: "luxury-products",
-  },
+  // {
+  //   id: 4,
+  //   title: "Luxury Products",
+  //   description:
+  //     "Exceptional products deserve exceptional photography. Our product photography uses precision lighting and meticulous attention to detail to showcase luxury items at their finest. Whether for advertising campaigns or e-commerce, we create images that highlight craftsmanship and inspire desire.",
+  //   coverImage: "/images/product.jpg",
+  //   slug: "luxury-products",
+  // },
 ]
 
 const featuredImages = [
-  { id: 1, src: "/images/gallery1.jpg", alt: "Gallery image 1", width: 1, height: 1 },
-  { id: 2, src: "/images/gallery2.jpg", alt: "Gallery image 2", width: 1, height: 2 },
-  { id: 3, src: "/images/gallery3.jpg", alt: "Gallery image 3", width: 1, height: 1 },
-  { id: 4, src: "/images/gallery4.jpg", alt: "Gallery image 4", width: 2, height: 1 },
-  { id: 5, src: "/images/gallery5.jpg", alt: "Gallery image 5", width: 1, height: 1 },
-  { id: 6, src: "/images/gallery6.jpg", alt: "Gallery image 6", width: 1, height: 1 },
+  { id: 1, src: "", alt: "Gallery image 1", width: 1, height: 1 },
+  { id: 2, src: "", alt: "Gallery image 2", width: 1, height: 2 },
+  { id: 3, src: "", alt: "Gallery image 3", width: 1, height: 1 },
+  { id: 4, src: "", alt: "Gallery image 4", width: 2, height: 1 },
+  { id: 5, src: "", alt: "Gallery image 5", width: 1, height: 1 },
+  { id: 6, src: "", alt: "Gallery image 6", width: 1, height: 1 },
 ]
 
 const clientLogos = [

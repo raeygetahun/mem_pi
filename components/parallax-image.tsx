@@ -36,7 +36,7 @@ export default function ParallaxImage({ src, alt, priority = false }: ParallaxIm
 
   return (
     <div ref={ref} className="absolute inset-0 overflow-hidden">
-      <motion.div style={{ y }} className="h-[120%] w-full absolute top-0">
+      <motion.div style={{ y }} className="h-[80%] w-full absolute top-0">
         <Image src={src || "/placeholder.svg"} alt={alt} fill priority={priority} className="object-cover" />
       </motion.div>
     </div>

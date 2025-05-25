@@ -6,6 +6,7 @@ import AnimatedText from "@/components/animated-text"
 import FadeInSection from "@/components/fade-in-section"
 import CustomCursor from "@/components/custom-cursor"
 import ParallaxImage from "@/components/parallax-image"
+import philo from "../../public/philo.jpg";
 
 export default function AboutPage() {
   return (
@@ -14,7 +15,7 @@ export default function AboutPage() {
 
       {/* Header */}
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
-        <ParallaxImage src="/images/studio-wide.jpg" alt="Our studio space" priority />
+        <ParallaxImage src="/studio-wide.jpg" alt="Our studio space" priority />
         <div className="absolute inset-0 bg-black/60 z-10" />
         <div className="container relative z-20 px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center">
@@ -55,8 +56,10 @@ export default function AboutPage() {
             </FadeInSection>
 
             <FadeInSection delay={0.3}>
-              <div className="relative aspect-[4/5]">
-                <Image src="/images/about-philosophy.jpg" alt="Studio philosophy" fill className="object-cover" />
+<div className="relative aspect-[5.5/5] overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+    {/* Optional gradient overlay */}
+    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10 pointer-events-none rounded-lg group cursor-pointer"></div>
+                <Image src={philo} alt="Studio philosophy" fill className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-105" />
               </div>
             </FadeInSection>
           </div>
@@ -163,7 +166,7 @@ export default function AboutPage() {
       {/* Contact CTA */}
       <section className="py-24 bg-black relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <Image src="/images/pattern.jpg" alt="Background pattern" fill className="object-cover" />
+          {/* <Image src="/images/pattern.jpg" alt="Background pattern" fill className="object-cover" /> */}
         </div>
         <div className="container relative z-10 px-4 md:px-6">
           <FadeInSection>
@@ -207,19 +210,19 @@ const studioSpaces = [
     id: 1,
     title: "Main Studio",
     description: "A 2,000 sq ft space with 20-foot ceilings and north-facing windows for perfect natural light.",
-    image: "/images/studio1.jpg",
+    image: "/",
   },
   {
     id: 2,
     title: "Black Box",
     description: "A fully controllable lighting environment for precise studio work and dramatic portraits.",
-    image: "/images/studio2.jpg",
+    image: "/",
   },
   {
     id: 3,
     title: "Client Lounge",
     description: "A comfortable space for meetings, presentations, and relaxation during shoots.",
-    image: "/images/studio3.jpg",
+    image: "/",
   },
 ]
 
@@ -229,42 +232,42 @@ const teamMembers = [
     name: "Alexandra Dumont",
     role: "Founder & Creative Director",
     bio: "With over 20 years of experience in fashion and portrait photography, Alexandra's work has been featured in Vogue, Harper's Bazaar, and numerous international exhibitions.",
-    image: "/images/team1.jpg",
+    image: "/",
   },
   {
     id: 2,
     name: "James Chen",
     role: "Founder & Technical Director",
     bio: "A master of lighting and composition, James specializes in architectural and product photography, bringing precision and artistry to every project.",
-    image: "/images/team2.jpg",
+    image: "/",
   },
   {
     id: 3,
     name: "Sophia Rodriguez",
     role: "Senior Photographer",
     bio: "Sophia's documentary approach to fashion and lifestyle photography has earned her acclaim for capturing authentic moments with editorial polish.",
-    image: "/images/team3.jpg",
+    image: "/",
   },
   {
     id: 4,
     name: "Marcus Williams",
     role: "Art Director",
     bio: "With a background in fine art and design, Marcus brings conceptual depth and visual coherence to our most ambitious projects.",
-    image: "/images/team4.jpg",
+    image: "/",
   },
   {
     id: 5,
     name: "Olivia Kim",
     role: "Digital Artist & Retoucher",
     bio: "Olivia's meticulous post-production work enhances our photography while maintaining authenticity and natural beauty.",
-    image: "/images/team5.jpg",
+    image: "/",
   },
   {
     id: 6,
     name: "David Okafor",
     role: "Production Manager",
     bio: "David's exceptional organizational skills and industry connections ensure that every shoot runs smoothly from concept to completion.",
-    image: "/images/team6.jpg",
+    image: "/",
   },
 ]
 

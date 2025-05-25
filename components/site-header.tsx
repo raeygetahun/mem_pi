@@ -56,7 +56,7 @@ export default function SiteHeader() {
   
         <Link href="/" className="flex items-center gap-2 z-50">
         <motion.div style={{ scale: logoScale, rotate: logoRotate }} className="origin-left">
-          <span className="font-serif text-4xl text-white tracking-wider">MemoryPictures</span>
+          <span className="font-serif text-4xl text-white tracking-wider text-gold">MemoryPictures</span>
           </motion.div>
         </Link>
         
@@ -83,7 +83,7 @@ export default function SiteHeader() {
             variant="outline"
             className="bg-transparent border-gold text-gold hover:bg-gold/10 rounded-none px-6 py-5 text-xs tracking-widest"
           >
-            <Link href="/contact">BOOK A SESSION</Link>
+          <Link href="/contact" onClick={() => setIsMenuOpen(false)}>BOOK A SESSION</Link>
           </Button>
         </div>
 
@@ -99,11 +99,11 @@ export default function SiteHeader() {
         {/* Mobile Menu */}
         <div
           className={cn(
-            "fixed inset-0 bg-black flex flex-col items-center justify-center transition-opacity duration-300 md:hidden",
+            "fixed inset-0 bg-black flex flex-col items-center justify-start pt-24 transition-opacity duration-300 md:hidden",
             isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none",
           )}
         >
-          <nav className="flex flex-col items-center gap-8">
+          <nav className="flex flex-col items-center gap-6 bg-black/95 rounded-xl shadow-2xl border-2 border-gold px-8 py-10">
             {navigation.map((item) => (
               <Link
                 key={item.href}

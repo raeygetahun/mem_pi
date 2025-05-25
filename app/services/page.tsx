@@ -1,10 +1,10 @@
-import Link from "next/link"
-import Image from "next/image"
-import { ArrowRight, Check } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import FadeInSection from "@/components/fade-in-section"
-import CustomCursor from "@/components/custom-cursor"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import Link from "next/link";
+import Image from "next/image";
+import { ArrowRight, Check } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import FadeInSection from "@/components/fade-in-section";
+import CustomCursor from "@/components/custom-cursor";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export default function ServicesPage() {
   return (
@@ -17,10 +17,13 @@ export default function ServicesPage() {
         <div className="container relative z-10 px-4 md:px-6">
           <FadeInSection>
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className="font-serif text-4xl md:text-6xl text-white mb-6">Our Services</h1>
+              <h1 className="font-serif text-4xl md:text-6xl text-white mb-6">
+                Our Services
+              </h1>
               <p className="text-cream/80 text-lg max-w-2xl mx-auto">
-                Exceptional photography services tailored to your unique vision and requirements. Each service is
-                customized to deliver imagery that exceeds expectations.
+                Exceptional photography services tailored to your unique vision
+                and requirements. Each service is customized to deliver imagery
+                that exceeds expectations.
               </p>
             </div>
           </FadeInSection>
@@ -33,28 +36,50 @@ export default function ServicesPage() {
           <FadeInSection>
             <Tabs defaultValue="portrait" className="w-full">
               <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 bg-charcoal/50 p-1 mb-12">
-                <TabsTrigger value="portrait" className="data-[state=active]:bg-gold data-[state=active]:text-black">
+                <TabsTrigger
+                  value="portrait"
+                  className="data-[state=active]:bg-gold data-[state=active]:text-black"
+                >
                   Portrait
                 </TabsTrigger>
-                <TabsTrigger value="commercial" className="data-[state=active]:bg-gold data-[state=active]:text-black">
+                <TabsTrigger
+                  value="commercial"
+                  className="data-[state=active]:bg-gold data-[state=active]:text-black"
+                >
                   Commercial
                 </TabsTrigger>
-                <TabsTrigger value="event" className="data-[state=active]:bg-gold data-[state=active]:text-black">
+                <TabsTrigger
+                  value="event"
+                  className="data-[state=active]:bg-gold data-[state=active]:text-black"
+                >
                   Event
                 </TabsTrigger>
-                <TabsTrigger value="editorial" className="data-[state=active]:bg-gold data-[state=active]:text-black">
+                <TabsTrigger
+                  value="editorial"
+                  className="data-[state=active]:bg-gold data-[state=active]:text-black"
+                >
                   Editorial
                 </TabsTrigger>
               </TabsList>
 
               {services.map((service) => (
-                <TabsContent key={service.id} value={service.value} className="mt-0">
+                <TabsContent
+                  key={service.id}
+                  value={service.value}
+                  className="mt-0"
+                >
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div>
-                      <h2 className="font-serif text-3xl text-white mb-6">{service.title}</h2>
-                      <p className="text-cream/80 mb-8 leading-relaxed">{service.description}</p>
+                      <h2 className="font-serif text-3xl text-white mb-6">
+                        {service.title}
+                      </h2>
+                      <p className="text-cream/80 mb-8 leading-relaxed">
+                        {service.description}
+                      </p>
 
-                      <h3 className="text-gold text-lg mb-4">What's Included:</h3>
+                      <h3 className="text-gold text-lg mb-4">
+                        What's Included:
+                      </h3>
                       <ul className="grid gap-3 mb-8">
                         {service.features.map((feature, index) => (
                           <li key={index} className="flex items-start">
@@ -69,17 +94,20 @@ export default function ServicesPage() {
                         className="bg-gold text-black hover:bg-gold/90 rounded-none px-8 py-6 text-sm tracking-widest"
                       >
                         <Link href="/contact" className="group">
-                          INQUIRE ABOUT {service.title.toUpperCase()}
+                          <span className="block md:hidden">INQUIRE</span>
+                          <span className="hidden md:inline">
+                            INQUIRE ABOUT {service.title.toUpperCase()}
+                          </span>
                           <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                         </Link>
                       </Button>
                     </div>
-                    <div className="relative aspect-[4/5] overflow-hidden">
+                    <div className="relative aspect-[4/5] overflow-hidden rounded-lg group cursor-pointer">
                       <Image
                         src={service.image || "/placeholder.svg"}
                         alt={service.title}
                         fill
-                        className="object-cover"
+                        className="object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
                       />
                     </div>
                   </div>
@@ -94,7 +122,9 @@ export default function ServicesPage() {
       <section className="py-24 bg-charcoal">
         <div className="container px-4 md:px-6">
           <FadeInSection>
-            <h2 className="font-serif text-3xl md:text-4xl text-white text-center mb-16">Our Process</h2>
+            <h2 className="font-serif text-3xl md:text-4xl text-white text-center mb-16">
+              Our Process
+            </h2>
           </FadeInSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -104,7 +134,9 @@ export default function ServicesPage() {
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gold text-black font-serif text-2xl mb-6">
                     {step.id}
                   </div>
-                  <h3 className="font-serif text-xl text-white mb-4">{step.title}</h3>
+                  <h3 className="font-serif text-xl text-white mb-4">
+                    {step.title}
+                  </h3>
                   <p className="text-cream/70">{step.description}</p>
                 </div>
               </FadeInSection>
@@ -174,9 +206,12 @@ export default function ServicesPage() {
         <div className="container px-4 md:px-6">
           <FadeInSection>
             <div className="max-w-3xl mx-auto text-center mb-16">
-              <h2 className="font-serif text-3xl md:text-4xl text-white mb-6">Frequently Asked Questions</h2>
+              <h2 className="font-serif text-3xl md:text-4xl text-white mb-6">
+                Frequently Asked Questions
+              </h2>
               <p className="text-cream/80">
-                Have questions about working with us? Find answers to common inquiries below.
+                Have questions about working with us? Find answers to common
+                inquiries below.
               </p>
             </div>
           </FadeInSection>
@@ -186,7 +221,9 @@ export default function ServicesPage() {
               {faqs.map((faq, index) => (
                 <FadeInSection key={faq.id} delay={index * 0.1}>
                   <div className="bg-black/30 p-6">
-                    <h3 className="font-serif text-xl text-white mb-3">{faq.question}</h3>
+                    <h3 className="font-serif text-xl text-white mb-3">
+                      {faq.question}
+                    </h3>
                     <p className="text-cream/70">{faq.answer}</p>
                   </div>
                 </FadeInSection>
@@ -199,15 +236,17 @@ export default function ServicesPage() {
       {/* Contact CTA */}
       <section className="py-24 bg-black relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <Image src="/images/pattern.jpg" alt="Background pattern" fill className="object-cover" />
+          {/* <Image src="/images/pattern.jpg" alt="Background pattern" fill className="object-cover" /> */}
         </div>
         <div className="container relative z-10 px-4 md:px-6">
           <FadeInSection>
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="font-serif text-3xl md:text-4xl text-white mb-6">Ready to Discuss Your Project?</h2>
+              <h2 className="font-serif text-3xl md:text-4xl text-white mb-6">
+                Ready to Discuss Your Project?
+              </h2>
               <p className="text-cream/80 mb-8">
-                Contact us today to schedule a consultation and learn how our photography services can bring your vision
-                to life.
+                Contact us today to schedule a consultation and learn how our
+                photography services can bring your vision to life.
               </p>
               <Button
                 asChild
@@ -223,7 +262,7 @@ export default function ServicesPage() {
         </div>
       </section>
     </main>
-  )
+  );
 }
 
 // Sample data
@@ -234,7 +273,7 @@ const services = [
     title: "Portrait Photography",
     description:
       "Our portrait photography captures the essence of individuals, couples, and families with a focus on authentic emotion and artistic composition. Whether for personal branding, family heirlooms, or creative expression, our portraits tell your unique story.",
-    image: "/images/service-portrait.jpg",
+    image: "/indians-portrait.jpg",
     features: [
       "Pre-shoot consultation to plan concept and styling",
       "Professional hair and makeup services available",
@@ -250,7 +289,7 @@ const services = [
     title: "Commercial Photography",
     description:
       "Elevate your brand with sophisticated commercial photography that communicates your brand's premium positioning. From product photography to corporate imagery, we create visuals that drive engagement and conversion.",
-    image: "/images/service-commercial.jpg",
+    image: "/whisky-commercial.jpg",
     features: [
       "Brand strategy consultation",
       "Art direction and styling",
@@ -266,7 +305,7 @@ const services = [
     title: "Event Coverage",
     description:
       "Comprehensive documentation of your luxury events, from intimate gatherings to grand galas. Our unobtrusive approach captures both candid moments and key highlights, creating a complete visual narrative of your special occasion.",
-    image: "/images/service-event.jpg",
+    image: "service-event.jpg",
     features: [
       "Pre-event planning and timeline coordination",
       "Multiple photographer options",
@@ -282,7 +321,7 @@ const services = [
     title: "Editorial Photography",
     description:
       "Tell compelling visual stories with our editorial photography services. Working with leading publications and brands, we create narrative-driven imagery that captivates audiences and communicates complex ideas with visual eloquence.",
-    image: "/images/service-editorial.jpg",
+    image: "/service-editorial.jpg",
     features: [
       "Concept development and storyboarding",
       "Location and talent casting",
@@ -292,7 +331,7 @@ const services = [
       "Publication-ready deliverables",
     ],
   },
-]
+];
 
 const process = [
   {
@@ -304,12 +343,14 @@ const process = [
   {
     id: 2,
     title: "Planning",
-    description: "Our team develops a detailed creative brief, timeline, and production plan for your approval.",
+    description:
+      "Our team develops a detailed creative brief, timeline, and production plan for your approval.",
   },
   {
     id: 3,
     title: "Production",
-    description: "On shooting day, our experienced team executes the vision with precision and artistic excellence.",
+    description:
+      "On shooting day, our experienced team executes the vision with precision and artistic excellence.",
   },
   {
     id: 4,
@@ -317,7 +358,7 @@ const process = [
     description:
       "Your images undergo careful editing and are delivered in your preferred format with licensing appropriate to your needs.",
   },
-]
+];
 
 const pricingPlans = [
   {
@@ -370,7 +411,7 @@ const pricingPlans = [
     buttonText: "REQUEST QUOTE",
     featured: false,
   },
-]
+];
 
 const faqs = [
   {
@@ -403,4 +444,4 @@ const faqs = [
     answer:
       "Each project includes specific licensing terms based on your needs. Personal use is included with portrait sessions, while commercial projects include limited-term usage. Extended and exclusive licensing options are available.",
   },
-]
+];

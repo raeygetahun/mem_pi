@@ -152,7 +152,7 @@ export default function ContactPage() {
       </section>
 
       {/* Map */}
-      <section className="py-12 md:py-24 bg-charcoal">
+      {/* <section className="py-12 md:py-24 bg-charcoal">
         <div className="container px-4 md:px-6">
           <FadeInSection>
             <h2 className="font-serif text-3xl text-white text-center mb-12">Visit Our Studio</h2>
@@ -173,7 +173,7 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* FAQ */}
       <section className="py-24">
@@ -205,7 +205,7 @@ export default function ContactPage() {
       {/* CTA */}
       <section className="py-24 bg-black relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <Image src="/images/pattern.jpg" alt="Background pattern" fill className="object-cover" />
+          {/* <Image src="/images/pattern.jpg" alt="Background pattern" fill className="object-cover" /> */}
         </div>
         <div className="container relative z-10 px-4 md:px-6">
           <FadeInSection>
