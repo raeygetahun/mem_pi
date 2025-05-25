@@ -1,11 +1,11 @@
 "use client"
 
 import { useRef, useEffect, useState } from "react"
-import Image from "next/image"
+import Image, { type StaticImageData } from "next/image"
 import { useScroll, useTransform, motion } from "framer-motion"
 
 interface ParallaxImageProps {
-  src: string
+  src: string | StaticImageData
   alt: string
   priority?: boolean
 }

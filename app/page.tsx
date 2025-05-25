@@ -12,6 +12,7 @@ import etherealPortraits from "../public/ethereal-portraits.jpg";
 import fashionForward from "../public/fashion-forward.jpg";
 import architecturalElegance from "../public/architectural-elegance.jpg";
 import studio from "../public/studio.jpg";
+import lakeWide from "../public/lake-wide.jpg";
 
 export default function Home() {
   return (
@@ -20,7 +21,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <ParallaxImage src="/lake-wide.jpg" alt="Luxury photography" priority />
+        <ParallaxImage src={lakeWide} alt="Luxury photography" priority />
         <div className="absolute inset-0 bg-black/30 z-10  bg-black/40 backdrop-blur-sm p-6 rounded-md" />
         <div className="container relative z-20 px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center">

@@ -7,6 +7,7 @@ import FadeInSection from "@/components/fade-in-section"
 import CustomCursor from "@/components/custom-cursor"
 import ParallaxImage from "@/components/parallax-image"
 import philo from "../../public/philo.jpg";
+import studioWide from "../../public/studio-wide.jpg";
 
 export default function AboutPage() {
   return (
@@ -15,7 +16,7 @@ export default function AboutPage() {
 
       {/* Header */}
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
-        <ParallaxImage src="/studio-wide.jpg" alt="Our studio space" priority />
+        <ParallaxImage src={studioWide} alt="Our studio space" priority />
         <div className="absolute inset-0 bg-black/60 z-10" />
         <div className="container relative z-20 px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center">
