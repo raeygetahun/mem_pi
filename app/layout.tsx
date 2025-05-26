@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
-        <link rel="icon" href="/_next/static/media/favicon.ico" />
+        <link rel="icon" href="/_next/static/media/favicon.png" />
       </head>
       <body className={`${inter.variable} ${cormorant.variable} font-sans antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
