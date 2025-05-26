@@ -38,7 +38,7 @@ export default function AboutPage() {
               <div className="max-w-xl">
                 <h2 className="font-serif text-3xl md:text-4xl text-white mb-8">Our Philosophy</h2>
                 <p className="text-cream/80 mb-6 leading-relaxed">
-                  At MemoryPictures, we believe that photography is more than documentation—it's an art form that reveals truth
+                  At MemoryPictures, we believe that photography is more than documentation. it's an art form that reveals truth
                   through careful interpretation. Our approach balances technical precision with artistic vision,
                   creating images that resonate on both intellectual and emotional levels.
                 </p>
