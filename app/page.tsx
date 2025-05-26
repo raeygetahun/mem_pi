@@ -13,6 +13,7 @@ import fashionForward from "../public/fashion-forward.jpg";
 import architecturalElegance from "../public/architectural-elegance.jpg";
 import studio from "../public/studio.jpg";
 import lakeWide from "../public/lake-wide.jpg";
+import favicon from "../public/favicon.png";
 
 export default function Home() {
   return (
