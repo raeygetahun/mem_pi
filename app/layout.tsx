@@ -5,6 +5,7 @@ import { Inter, Cormorant_Garamond } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import SiteHeader from "@/components/site-header"
 import SiteFooter from "@/components/site-footer"
+import favicon from "../public/favicon.png";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -33,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
-        <link rel="icon" href="/_next/static/media/favicon.png" />
+        <link rel="icon" href={favicon.src} />
       </head>
       <body className={`${inter.variable} ${cormorant.variable} font-sans antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
