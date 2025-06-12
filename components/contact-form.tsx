@@ -36,7 +36,7 @@ export default function ContactForm() {
     setFormStatus("submitting");
 
     try {
-      const response = await fetch("https://192.145.44.140:3050/contact-form", {
+      const response = await fetch("https://algonod.onrender.com/contact-form", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -96,7 +96,7 @@ export default function ContactForm() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-2">
           <Label htmlFor="name" className="text-white">
-            Full Name
+            Full Name *
           </Label>
           <Input
             id="name"
@@ -110,7 +110,7 @@ export default function ContactForm() {
         </div>
         <div className="space-y-2">
           <Label htmlFor="email" className="text-white">
-            Email Address
+            Email Address *
           </Label>
           <Input
             id="email"
@@ -194,7 +194,7 @@ export default function ContactForm() {
 
       <div className="space-y-2">
         <Label htmlFor="message" className="text-white">
-          Message
+          Message *
         </Label>
         <Textarea
           id="message"
